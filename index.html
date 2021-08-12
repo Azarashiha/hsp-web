@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <title>HSP診断テスト</title>
+</head>
+<body>
+    <script>
+        $(function() {
+            // チェックボックスをチェックしたら発動
+            $('input[name="hsp[]"]').change(function() {
+                var hsps = [];
+                
+                $('input[name="hsp[]"]:checked').each(function() {
+                    hsps.push($(this).val());
+                });
+                hsp=hsps.length;
+                $('#ans-count').text('チェックの数:'+" "+ hsp +" "+'項目');
+            });
+        });
+        
+    </script>
+
+
+
+    <div class="main-area">
+        <p class="con">HSP診断テスト <span class="ver">ver.1.0.0</span></p>
+            <div class="contents-area-w">
+        
+                <div class="contents-w">
+                    <p class="title-w">　ご利用上の注意点</p>
+                    <div class="message-area-w">
+                        <p class="message_1-w">
+                            <a href="warn.html">必ずお読みください</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contents-area">
+            <div id='before'></div>
+            </div>
+            <div class="contents">
+                <p class="title">　そもそもHSPとは</p>
+                <div class="message-area">
+                    <p class="message_1">
+                        ハイリー・センシティブ・パーソンとは、環境感受性あるいはその気質・性格的マーカーである感覚処理感受性が極めて高い人たちを表す言葉である。環境感受性とは、ポジティブおよびネガティブな環境刺激に対する処理や登録の個人差を表す特性的概念である。<br>
+                        wekipediaより
+                    </p>
+                </div>
+            </div>
+
+            <div class="contents">
+                <p class="title">　セルフチェック</p>
+                <div class="message-area">
+                    <p class="message_1">
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">1. 自分をとりまく環境の微妙な変化によく気づくほうだ</label><br><br>
+
+                        <label><input class='checks' type="checkbox" name='hsp[]'  value="1">2. 他人の気分に左右される</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">3. 痛みにとても敏感である</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">4. 忙しい日々が続くと、ベッドや暗い部屋などプライバシーが得られ、刺激から逃れられる場所にひきこもりたくなる</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">5. カフェインに敏感に反応する</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">6. 明るい光や強い匂い、ざらざらした布地、サイレンの音などに圧倒されやすい</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">7. 豊かな想像力を持ち、空想に耽(ふけ)りやすい</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">8. 騒音に悩まされやすい</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">9. 美術や音楽に深く心動かされる</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">10. とても良心的である</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">11. すぐにびっくりする（仰天する）</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">12. 短期間にたくさんのことをしなければならない時、混乱してしまう</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">13. 人が何かで不快な思いをしているとき、どうすれば快適になるかすぐに気づく
+                            （たとえば電灯の明るさを調節する、席を替えるなど）</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">14. 一度にたくさんのことを頼まれるがイヤだ</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">15. ミスをしたり、物を忘れたりしないようにいつも気をつける</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">16. 暴力的な映画やテレビ番組は見ないようにしている</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">17. あまりにもたくさんのことが自分のまわりで起こっていると、不快になり、神経が高ぶる</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">18. 空腹になると、集中できないとか気分が悪くなるといった強い反応が起こる</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">19. 生活に変化があると混乱する</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">20. デリケートな香りや味、音、音楽などを好む</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">21. 動揺するような状況を避けることを、普段の生活で最優先している</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">22. 仕事をする時、競争させられたり、観察されていると、緊張し、いつもの実力を発揮できなくなる</label><br><br>
+                        <label><input class='checks' type="checkbox" name='hsp[]' value="1">23. 子供のころ、親や教師は自分のことを「敏感だ」 とか 「内気だ」 と思っていた</label><br><br>
+                        
+                        参考:madreclinic.jp/pm-top/pm-symptom/pm-symptom-22/
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="contents">
+                <p class="title">　チェックの数</p>
+                <div class="message-area">
+                    <p class="message_1" id='ans-count'>
+                        チェックの数: 0 項目
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="contents">
+                <p class="title">　”はい”の数</p>
+                <div class="message-area">
+                    <p class="message_1">
+                        質問のうち12個以上に該当した場合は、HSPの気質があるとされます。<br>
+また当てはまるものが多いほど、HSPの度合いも高いとされます。<br>
+ただし、逆に「はい」がひとつかふたつしかなくても、その度合いが極端に強い場合は、HSPの気質があるとされます。<br>
+                    </p>
+                    
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>
